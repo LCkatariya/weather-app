@@ -32,7 +32,69 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.costomContainer {
+  padding: 20px;
+}
+
+.border-secendory {
+  padding: 5px;
+}
+
+.custom-card {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.searchBar {
+  padding: 10px;
+}
+
+.searchBar input {
+  margin-right: 5px;
+  border-radius: 5px !important;
+}
+
+.searchBar .btn-warning {
+  padding-inline: 30px;
+  border-radius: 5px !important
+}
+
+.weatherCard {
+  padding: 15px;
+}
+
+.bg-yellow {
+  background-color: rgb(238, 117, 30);
+  ;
+}
+
+.weatherCard .bg-whight {
+  background-color: darkgray;
+}
+
+.title {
+  color: rgb(238, 117, 30);
+}
+
+.spinner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 580px) {
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
