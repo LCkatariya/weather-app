@@ -5,15 +5,16 @@ import Header from "./component/Header";
 
 function App() {
   const [data, setData] = useState([]);
-  const [city, setCity] = useState("Jaipur");
   const [searchText, setSerarchText] = useState("Jaipur");
   const [loader, setLoader] = useState(false);
   const [errorMess, setErrorMess] = useState(false);
   const [error, setError] = useState(false);
+
   useEffect(() => {
-    hendleApi();
-  }, [city]);
-  const hendleApi = () => {
+    hendleApi(searchText);
+  }, []);
+  
+  const hendleApi = (city) => {
     setLoader(true);
     fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=1635890035cbba097fd5c26c8ea672a1`
@@ -51,7 +52,7 @@ function App() {
 
   const hendleSearch = () => {
     if (searchText == "") return;
-    setCity(searchText);
+    hendleApi(searchText)
   };
 
   return (
