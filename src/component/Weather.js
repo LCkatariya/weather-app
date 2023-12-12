@@ -7,7 +7,7 @@ const Weather = ({ data }) => {
         index < 12  ? (
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl weatherCard">
             <div class="row">
-              <div class="col-12 border border-secendory bg-yellow">Date :  {item.dt_txt}</div>
+              <div class="col-12 border border-secendory bg-yellow">Date :  {new Date(item.dt_txt).getDate()}/{new Date(item.dt_txt).getMonth()}/{new Date(item.dt_txt).getFullYear()}</div>
               <div class="col-12 border border-secendory bg-whight">Temperature</div>
               <div class="col-6 col-sm-6 border border-secendory bg-whight">Min</div>
               <div class="col-6 col-sm-6 border border-secendory bg-whight">Max</div>
